@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight+ for Firefish - BTC Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <!-- Header -->
+        <header class="popup-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">📊</div>
+                    <div class="title-group">
+                        <h1 class="extension-title">Insight+ for Firefish</h1>
+                        <span class="extension-subtitle">BTC Analyzer</span>
+                    </div>
+                </div>
+                <div class="status-badge">
+                    <span class="status-dot" id="status-dot"></span>
+                    <span class="status-text" id="status-text">Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="popup-content">
+
+
+            <!-- Status (only show if on Firefish) -->
+            <section class="status-section" id="status-section" style="display: none;">
+                <h2 class="section-title">📈 Analysis Status</h2>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <div class="status-info">
+                            <span class="status-label">Loan Cards Found</span>
+                            <span class="status-value" id="cards-found">--</span>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-info">
+                            <span class="status-label">Cards Analyzed</span>
+                            <span class="status-value" id="cards-analyzed">--</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Not on Firefish message -->
+            <section class="info-section" id="not-firefish" style="display: none;">
+                <div class="info-box">
+                    <div class="info-icon">ℹ️</div>
+                    <div class="info-text">
+                        <strong>Not on Firefish</strong><br>
+                        Navigate to <a href="https://app.firefish.io" target="_blank">app.firefish.io</a> to analyze Bitcoin loans.
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="popup-footer">
+            <div class="footer-info">
+                <span class="version">v1.0.0</span>
+                <span class="separator">•</span>
+                <span class="api-credit">CoinGecko API</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
